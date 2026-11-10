@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Registration - Verify Number</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f6f9; padding-top: 50px; }
+        .container { background: #fff; max-width: 450px; margin: auto; padding: 30px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0,0,0,0.1); }
+        h2 { color: #333; text-align: center; margin-bottom: 20px; }
+        .form-group { margin-bottom: 15px; text-align: left; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #444; }
+        input, select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        .btn { width: 100%; background: #28a745; color: white; border: none; padding: 12px; border-radius: 4px; font-size: 16px; cursor: pointer; font-weight: bold; margin-top: 10px; }
+        .btn:hover { background: #218838; }
+        .back-link { display: block; text-align: center; margin-top: 15px; color: #007bff; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Create New Account</h2>
+        <!-- Yahan form action mein aap apne Lamix panel ka API endpoint ya submission script daal sakte hain -->
+        <form id="regForm" action="YOUR_LAMIX_API_OR_ENDPOINT_URL" method="POST">
+            
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Select Country</label>
+                <select id="country" name="country">
+                    <option value="TZ" selected>Tanzania (+255)</option>
+                    <option value="PS">Palestine (+970)</option>
+                    <option value="IL">Israel (+972)</option>
+                    <option value="TN">Tunisia (+216)</option>
+                    <option value="DZ">Algeria (+213)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Mobile Number</label>
+                <input type="text" id="phone" name="phone" placeholder="e.g. 712345678" required>
+            </div>
+
+            <button type="submit" class="btn">Send Verification OTP</button>
+        </form>
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+</body>
+</html>
